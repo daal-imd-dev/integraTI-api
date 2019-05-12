@@ -1,0 +1,18 @@
+# Bleeding edge Django
+django==2.2
+python-decouple==3.1
+
+# Database
+psycopg2-binary==2.7.6.1
+
+# Fixtures
+factory_boy==2.11.1
+
+# CI
+flake8==3.6.0
+
+# Date & Time
+pendulum==2.0.4
+
+# Setup tools
+setuptools==40.6.3
