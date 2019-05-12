@@ -2,6 +2,10 @@
 django==2.2
 python-decouple==3.1
 
+# Api
+djangorestframework==3.9.4
+django-cors-headers==2.2.0
+
 # Database
 psycopg2-binary==2.7.6.1
 
@@ -16,3 +20,8 @@ pendulum==2.0.4
 
 # Setup tools
 setuptools==40.6.3
+
+# Dependencies
+Pillow==5.0.0
+pytz==2018.3
+whitenoise==3.3.1
