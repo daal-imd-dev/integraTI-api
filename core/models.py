@@ -1,8 +1,11 @@
+import uuid
+
 from django.db import models
-from django.contrib.auth.models import AbstractUser
 
 
-class Base(models.Model):
+class BaseModel(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+
     is_active = models.BooleanField(default=False)
 
     inserted_since = models.DateField(auto_now_add=True)
@@ -13,10 +16,3 @@ class Base(models.Model):
 
     class Meta:
         abstract = True
-
-
-class User(AbstractUser, Base):
-    sigaa_registration_number = models.CharField(max_length=15, unique=True, blank=True, null=True)
-    sigaa_user_name = models.CharField(max_length=50, unique=True, blank=True, null=True)
-    sigaa_token = models.CharField(max_length=200, blank=True, null=True)
-    photo = models.ImageField(upload_to='avatars/', null=True, blank=True)
