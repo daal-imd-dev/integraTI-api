@@ -12,7 +12,7 @@ django-extensions==1.7.4
 
 # Debug
 # ------------------------------------------------
-django-debug-toolbar==1.6
+django-debug-toolbar==1.11.1
 ipdb==0.10.1
 
 # Tests
